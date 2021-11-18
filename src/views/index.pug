@@ -8,11 +8,9 @@ html
         div(class="page-container")
           h1 🎢 RCDB Scraper 🎢 
           p This is a simple app that helps us scrape data from the uncooperative folks at rcdb. It currently works for coasters only.
-          p Head to #[a(href="http://rcdb.com") rcdb] and create an #[a(href="https://rcdb.com/os.htm?ot=2") advanced search]. Grab the URL of the search results page and paste it into the input below, then hit Submit! A CSV of your results should start downloading.
+          p Head to #[a(href="http://rcdb.com", target="_blank") rcdb] and create an #[a(href="https://rcdb.com/os.htm?ot=2", target="_blank") advanced search]. Grab the URL of the search results page and paste it into the input below, then hit Submit! A CSV of your results should start downloading.
           p For example, submitting https://rcdb.com/r.htm?ex=on&ol=18965&ot=2 will get you a CSV of every operating coaster in the great state of Pennsylvania.
           p It's a work in progress! You can #[a(href="mailto:willowceleste325@gmail.com") email me] if something is broken 😁 
           form(action="/coasters", method='GET' class="form") 
             input(type="text", name='url' placeholder="Enter rcdb search url" class="url-input")
             input(type='submit', value='Submit')
-        div
-          p(data-results)
